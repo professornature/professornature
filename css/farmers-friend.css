@@ -1,0 +1,367 @@
+/* Farmers Friend Solar Systems - Custom Styles */
+
+/* Color Variables */
+:root {
+    --primary-green: #28a745;
+    --secondary-green: #20c997;
+    --warning-yellow: #ffc107;
+    --dark-green: #155724;
+    --light-green: #d4edda;
+    --success-color: #198754;
+    --solar-orange: #fd7e14;
+}
+
+/* Accessibility Improvements */
+*:focus {
+    outline: 3px solid var(--warning-yellow);
+    outline-offset: 2px;
+}
+
+/* Skip to main content for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-green);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .text-success { color: #000 !important; }
+    .bg-success { background-color: #000 !important; }
+    .btn-success { 
+        background-color: #000 !important; 
+        border-color: #000 !important; 
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .animated,
+    .wow,
+    .carousel,
+    .owl-carousel {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Mobile-First Hero Section */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../img/solar-pattern.svg') repeat;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Hero Stats Card */
+.hero-stats {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--warning-yellow);
+}
+
+/* Product Cards Enhancement */
+.service-item {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    height: 100%;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    background: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -40px auto 20px;
+    border: 3px solid var(--light-green);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Solar Calculator Styling */
+.calculator-form {
+    border-radius: 15px;
+}
+
+.calculator-form .form-control,
+.calculator-form .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px; /* Prevent zoom on iOS */
+}
+
+.calculator-form .form-control:focus,
+.calculator-form .form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Button Enhancements */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-success {
+    background: var(--primary-green);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-success:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-warning {
+    background: var(--warning-yellow);
+    color: #212529;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-warning:hover {
+    background: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+
+/* Testimonial Cards */
+.testimonial-item {
+    background: white;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-item:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Navbar Enhancements */
+.navbar-brand h2 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin: 0 0.2rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: var(--light-green);
+    color: var(--dark-green) !important;
+}
+
+/* Footer Styling */
+.footer .btn-link {
+    color: #adb5bd;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-link:hover {
+    color: var(--warning-yellow);
+    padding-left: 1rem;
+}
+
+.btn-social {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #495057;
+    color: #adb5bd;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    background: var(--warning-yellow);
+    border-color: var(--warning-yellow);
+    color: #212529;
+}
+
+/* Form Enhancements for Accessibility */
+label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+/* Language Selection Modal */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background: var(--light-green);
+    padding-left: 2rem;
+}
+
+.list-group-item.active {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid var(--primary-green);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Offline/Low Connectivity Indicators */
+.offline-indicator {
+    background: #fd7e14;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.offline-indicator.show {
+    transform: translateY(0);
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 576px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-stats {
+        margin-top: 2rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+    
+    .container-xxl {
+        padding: 2rem 0;
+    }
+    
+    .calculator-form .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item img {
+        height: 200px !important;
+    }
+    
+    .testimonial-item {
+        margin-bottom: 1rem;
+    }
+    
+    .page-header {
+        min-height: 60vh;
+        padding: 2rem 0;
+    }
+}
+
+/* Large Screen Optimizations */
+@media (min-width: 1400px) {
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .btn,
+    .modal {
+        display: none !important;
+    }
+    
+    .page-header {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Dark Mode Support (Future Enhancement) */
+@media (prefers-color-scheme: dark) {
+    .bg-light {
+        background-color: #2d3748 !important;
+    }
+    
+    .text-dark {
+        color: #e2e8f0 !important;
+    }
+}
